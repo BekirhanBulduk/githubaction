@@ -14,5 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2  
 
-      - name: Environment variable listing
-        run: printenv 
+      - name: Bekir env Tanimlama
+        run: |
+          echo "Hello World"
+          echo $Bekir
+        env:
+          Bekir: "Bu bekir env"
