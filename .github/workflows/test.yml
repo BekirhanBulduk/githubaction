@@ -4,19 +4,19 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  
+  workflow_dispatch:
 
 env:
   DAY_OF_WEEK: Monday
 
 jobs:
-  test-job:  
-    runs-on: ubuntu-latest 
+  test-job:
+    runs-on: ubuntu-latest
     env:
       SELAMLAR: HELLO
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2  
+      - name: Checkout adimi
+        uses: actions/checkout@v2
 
       - name: Bekir env Tanimlama
         run: |
@@ -24,8 +24,17 @@ jobs:
           echo $Bekir
         env:
           Bekir: "Bu bekir env düzenlendi."
-      - name: Bu da ikinci adim 
+      - name: Bu da ikinci adim
         run: |
+          echo $DAY_OF_WEEK
+          echo $SELAMLAR
+          echo $Bekir
+  test-job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bu ikinci Job
+        run: |
+          echo "This is the second job"
           echo $DAY_OF_WEEK
           echo $SELAMLAR
           echo $Bekir
