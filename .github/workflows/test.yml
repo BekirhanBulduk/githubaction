@@ -48,8 +48,11 @@ jobs:
           name: logs # Artifact adı
           path: ./downloaded_logs # Artifact dosyasını kaydedeceğimiz dizin
 
+      - name: Display the logs # İndirilen log dosyasını görüntüleme
+        run: |
+          cat ./downloaded_logs/logs.txt  # Artifact dosyasının içeriğini görüntüle
+
       - name: Print some environment variables
         run: |
           echo $DAY_OF_WEEK  # Workflow seviyesinde tanımlanan DAY_OF_WEEK değişkeni burada geçerli
           echo $SELAMLAR  # Job seviyesinde tanımlanan SELAMLAR değişkeni burada geçerli
-          echo $
