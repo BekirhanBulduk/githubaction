@@ -3,7 +3,7 @@ name: Test pipeline
 on:
   push:
     branches:
-    - master
+    - main
   workflow_dispath:
 
 jobs:
