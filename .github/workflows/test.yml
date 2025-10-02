@@ -1,7 +1,7 @@
 name: Test pipeline with Artifact
 
 on:
-  push:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
